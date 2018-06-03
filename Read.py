@@ -9,6 +9,7 @@ def readPixels(path):
         else:
             pixVals[i] = 1
     realPixVals = []
+    #turns to 2D array
     for i in range(32):
         realPixVals +=  [pixVals[32 * i: 32 * (i + 1)]]
     return realPixVals
@@ -75,11 +76,12 @@ def recognize(path):
             for col in range(32):
                 if toTest[row][col] == 1:
                     toAdd[0] += weigths[row][col]
+                    #print toAdd
         grades += [toAdd]
 
     grades = sorted(grades, key=lambda x: x[0], reverse=True)
 
-    return grades[0][1]
+    return grades
 
 
 

@@ -40,6 +40,13 @@ to export
     set pcolor white
   ]
 end
+
+to exportToTest
+  set-patch-size 1
+  export-view "toTest.png"
+  set-patch-size 20
+end
+
 @#$#@#$#@
 GRAPHICS-WINDOW
 210
@@ -125,16 +132,16 @@ INPUTBOX
 194
 349
 fileName
-seven
+five
 1
 0
 String
 
 MONITOR
 58
-521
+484
 140
-566
+529
 NIL
 fileCounter
 17
@@ -158,10 +165,27 @@ INPUTBOX
 140
 121
 startAt
-21
+5
 1
 0
 String
+
+BUTTON
+25
+592
+141
+625
+NIL
+exportToTest
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
 
 @#$#@#$#@
 ## WHAT IS IT?
